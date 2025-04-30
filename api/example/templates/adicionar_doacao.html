@@ -1,0 +1,106 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Doação</title>
+    <link rel="stylesheet" href="{% static 'example/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Adicionar Doação</h1>
+    </header>
+    <main>
+        <form action="{% url 'adicionar_doacao' %}" method="POST" id="doacaoForm">
+            {% csrf_token %}
+            <label for="tipo">Tipo de Doação:</label>
+            <select name="tipo" id="tipo" required onchange="toggleFields()">
+                <option value="">Selecione...</option>
+                <option value="vestuario">Vestuário</option>
+                <option value="eletrodomestico">Eletrodoméstico</option>
+                <option value="alimento">Alimento</option>
+            </select>
+
+            <!-- Campos para Vestuário -->
+            <div id="vestuarioFields" style="display:none;">
+                <label for="vestuario">Vestuário:</label>
+                <select name="vestuario" id="vestuario">
+                    {% for vestuario in vestuarios %}
+                        <option value="{{ vestuario.id }}">{{ vestuario }}</option>
+                    {% endfor %}
+                </select>
+                <label for="tamanho">Tamanho:</label>
+                <select name="tamanho" id="tamanho">
+                    {% for tamanho in tamanhos %}
+                        <option value="{{ tamanho.id }}">{{ tamanho }}</option>
+                    {% endfor %}
+                </select>
+                <label for="genero">Gênero:</label>
+                <select name="genero" id="genero">
+                    {% for genero in generos %}
+                        <option value="{{ genero.id }}">{{ genero }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Campos para Eletrodoméstico -->
+            <div id="eletrodomesticoFields" style="display:none;">
+                <label for="eletrodomestico">Eletrodoméstico:</label>
+                <select name="eletrodomestico" id="eletrodomestico">
+                    {% for eletro in eletrodomesticos %}
+                        <option value="{{ eletro.id }}">{{ eletro }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Campos para Alimento -->
+            <div id="alimentoFields" style="display:none;">
+                <label for="alimento">Alimento:</label>
+                <select name="alimento" id="alimento">
+                    {% for alimento in alimentos %}
+                        <option value="{{ alimento.id }}">{{ alimento }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" name="quantidade" id="quantidade" min="1" required>
+
+            <button type="submit">Adicionar Doação</button>
+        </form>
+
+        <!-- Pop-up para confirmação de doação -->
+        {% if doacao_realizada %}
+        <div id="popup" style="display:block;">
+            <div class="popup-content">
+                <p>Obrigado! Você doou <strong>{{ quantidade }}</strong> itens.</p>
+                <button onclick="window.location.href='{% url 'index' %}'" class="btn-donate">Voltar</button>
+            </div>
+        </div>
+        {% endif %}
+    </main>
+    <script>
+        function toggleFields() {
+            document.getElementById('vestuarioFields').style.display = 'none';
+            document.getElementById('eletrodomesticoFields').style.display = 'none';
+            document.getElementById('alimentoFields').style.display = 'none';
+
+            var tipo = document.getElementById('tipo').value;
+            if (tipo === 'vestuario') {
+                document.getElementById('vestuarioFields').style.display = 'block';
+            } else if (tipo === 'eletrodomestico') {
+                document.getElementById('eletrodomesticoFields').style.display = 'block';
+            } else if (tipo === 'alimento') {
+                document.getElementById('alimentoFields').style.display = 'block';
+            }
+        }
+
+        // Função para redirecionar para index.html
+        function voltarParaIndex() {
+            window.location.href = "{% url 'index' %}";
+        }
+    </script>
+</body>
+</html>
