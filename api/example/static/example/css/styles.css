@@ -1,5 +1,5 @@
 html {
-    background-color: #f8f9fa; /* Cor de fundo leve */
+    background-color: #e6f0fa; /* Azul bem claro */
 }
 
 body {
@@ -8,22 +8,22 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Para ocupar pelo menos toda a altura da viewport */
-    background-color: #fff; /* Fundo branco */
-    color: #333; /* Texto em cor escura para contraste */
+    min-height: 100vh;
+    background-color: #ffffff; /* Branco */
+    color: #002b5c; /* Azul escuro para contraste */
 }
 
 .container {
     display: flex;
-    justify-content: space-between; /* Para distribuir o espaço entre os elementos */
+    justify-content: space-between;
     align-items: center;
     width: 90%;
-    max-width: 1200px; /* Limite a largura máxima */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 header {
-    background-color: #c0392b; /* Vermelho escuro */
+    background-color: #005a9c; /* Azul escuro */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -31,102 +31,102 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5em; /* Tamanho da fonte aumentado */
+    font-size: 2.5em;
 }
 
 .btn-login,
 .btn-donate,
 .btn-register {
-    background-color: #e74c3c; /* Vermelho brilhante */
+    background-color: #007acc; /* Azul médio vibrante */
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em; /* Tamanho da fonte ajustado */
-    transition: background-color 0.3s; /* Animação suave ao passar o mouse */
+    font-size: 1em;
+    transition: background-color 0.3s;
 }
 
 .btn-login:hover,
 .btn-donate:hover,
 .btn-register:hover {
-    background-color: #c0392b; /* Vermelho escuro ao passar o mouse */
+    background-color: #005a9c; /* Azul mais escuro ao passar o mouse */
 }
 
 .horizontal-container {
-    display: flex; /* Alinha as seções horizontalmente */
-    justify-content: space-around; /* Distribui espaço uniforme entre as seções */
-    width: 90%; /* Largura do contêiner */
-    margin: 50px auto; /* Centraliza o contêiner e adiciona margem */
-    flex-wrap: wrap; /* Permite que as seções se movam para a próxima linha em telas menores */
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 50px auto;
+    flex-wrap: wrap;
 }
 
 .donation-info {
-    flex: 1; /* Faz com que cada seção ocupe o mesmo espaço */
-    margin: 10px; /* Adiciona margem entre as seções */
+    flex: 1;
+    margin: 10px;
     padding: 20px;
-    border: 1px solid #d3d3d3; /* Borda suave */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #b3d4fc; /* Azul claro suave */
+    box-shadow: 2px 2px 10px rgba(0, 0, 100, 0.1);
     text-align: center;
-    box-sizing: border-box; /* Inclui o padding e a borda na largura total */
-    background-color: #f9f9f9; /* Fundo claro para seções de doação */
-    border-radius: 8px; /* Bordas arredondadas */
+    box-sizing: border-box;
+    background-color: #f0f8ff; /* Azul muito claro */
+    border-radius: 8px;
 }
 
 .donation-info h2 {
-    font-size: 3em; /* Tamanho ajustado */
-    color: #c0392b; /* Vermelho escuro */
-    margin: 20px 0; /* Margens superior e inferior */
+    font-size: 3em;
+    color: #007acc; /* Azul vibrante */
+    margin: 20px 0;
 }
 
 .donation-info p {
-    font-size: 1.2em; /* Tamanho da fonte ajustado */
-    color: #555; /* Cor de texto cinza */
+    font-size: 1.2em;
+    color: #336699; /* Azul médio suave */
 }
 
 footer {
-    background-color: #c0392b; /* Vermelho escuro */
+    background-color: #005a9c; /* Azul escuro */
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: auto; /* Isso empurra o footer para o final da página */
+    margin-top: auto;
 }
 
 footer p {
     margin: 0;
-    font-size: 0.9em; /* Tamanho da fonte do rodapé */
+    font-size: 0.9em;
 }
 
 /* Estilização do formulário */
 .form-container {
-    width: 80%; /* Largura de 80% da tela */
-    margin: 20px auto; /* Centraliza o contêiner */
-    padding: 20px; /* Adiciona espaço interno */
-    border: 1px solid #d3d3d3; /* Borda ao redor do contêiner */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    background-color: #fff; /* Fundo branco */
-    border-radius: 8px; /* Bordas arredondadas */
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #b3d4fc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 100, 0.1);
+    background-color: #ffffff;
+    border-radius: 8px;
 }
 
 input, select {
-    margin-top: 10px; /* Margem acima dos campos */
-    padding: 10px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    border: 1px solid #d3d3d3; /* Borda suave */
-    font-size: 1em; /* Tamanho da fonte ajustado */
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #99ccee;
+    font-size: 1em;
 }
 
 button[type="submit"] {
     height: 45px;
-    width: 100%; /* Largura total do botão */
-    background-color: #e74c3c; /* Vermelho brilhante */
+    width: 100%;
+    background-color: #007acc;
     color: white;
     font-weight: bold;
-    border: none; /* Remove borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s; /* Animação suave ao passar o mouse */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 button[type="submit"]:hover {
-    background-color: #c0392b; /* Vermelho escuro ao passar o mouse */
+    background-color: #005a9c;
 }
