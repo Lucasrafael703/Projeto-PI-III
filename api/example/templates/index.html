@@ -23,25 +23,26 @@
             <h2><span>{{ soma_quantidade }}</span></h2>
             <p>Essa é quantidade de roupas doadas até o momento</p>
             <p>Para contribuir você pode ir até um de nossos pontos de coleta</p>
-            <p>Para saber mais clique em doar</p>
-            <a href="{% url 'adicionar_doacao' %}"><button class="btn-donate">Doar</button></a>
         </section>
 
         <section class="donation-info">
             <h2><span>{{ soma_quantidade_eletrodomestico }}</span></h2>
             <p>Essa é quantidade de eletrodomésticos doadas até o momento</p>
             <p>Para contribuir você pode ir até um de nossos pontos de coleta</p>
-            <p>Para saber mais clique em doar</p>
-            <a href="{% url 'adicionar_doacao' %}"><button class="btn-donate">Doar</button></a>
         </section>
 
         <section class="donation-info">
             <h2><span>{{ soma_quantidade_alimento }}</span></h2>
             <p>Essa é a quantidade de alimentos doados até o momento</p>
             <p>Para contribuir você pode ir até um de nossos pontos de coleta</p>
-            <p>Para saber mais clique em doar</p>
-            <a href="{% url 'adicionar_doacao' %}"><button class="btn-donate">Doar</button></a>
         </section>
+    </div>
+
+    <!-- Botão centralizado -->
+    <div class="centralizar-botao">
+        <a href="{% url 'adicionar_doacao' %}">
+            <button class="btn-donate">Clique aqui para doar</button>
+        </a>
     </div>
 
     <footer>
